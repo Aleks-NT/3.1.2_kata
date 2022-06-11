@@ -52,12 +52,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService users() {
         UserDetails user = User.builder()
                 .username("user")
-                .password("12345")
+                .password("{bcrypt}$2a$12$0teggMbhZTfRKFzjLgorPejHTndS8XiHZasS7hAX7aMhJcW4HyZGa")
                 .roles("USER")
                 .build();
         UserDetails admin = User.builder()
                 .username("admin")
-                .password("12345")
+                .password("{bcrypt}$2a$12$0teggMbhZTfRKFzjLgorPejHTndS8XiHZasS7hAX7aMhJcW4HyZGa")
                 .roles("ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(user, admin);
