@@ -51,6 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+//        return NoOpPasswordEncoder.getInstance();
     }
 
     @Bean
@@ -63,7 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     // аутентификация inMemory
 //    @Bean
-//    public UserDetailsService userDetailsService() {
+//    public UserDetailsService userService() {
 //        UserDetails user = User.withDefaultPasswordEncoder()
 //                .username("user")
 //                .password("12345")
