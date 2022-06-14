@@ -9,7 +9,7 @@ import java.util.Collection;
 @Service
 public class RoleServiceImpl implements RoleService{
 
-    RoleRepository roleRepository;
+    private RoleRepository roleRepository;
 
     public RoleServiceImpl(RoleRepository roleRepository) {
         this.roleRepository = roleRepository;
